@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
+
+declare var cv : any;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Test-opencv';
+
+  @ViewChild('originalImage') public originalImage! : ElementRef;
+
+  constructor() {
+  }
+
+
 }
